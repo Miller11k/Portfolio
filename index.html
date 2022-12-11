@@ -2,12 +2,19 @@
 <?php
 if (isset($_POST['submit'])) {
   // get the form data
-  $to = $_POST['to'];
-  $subject = $_POST['subject'];
+  $to = "m.kodish@yahoo.com";
+  $subject = "Message from your portfolio site";
+  $name = $_POST['name'];
+  $email = $_POST['email'];
   $message = $_POST['message'];
 
+  // build the email content
+  $email_content = "Name: $name\n";
+  $email_content .= "Email: $email\n\n";
+  $email_content .= "Message:\n$message\n";
+
   // send the email
-  mail($to, $subject, $message);
+  mail($to, $subject, $email_content);
 }
 ?>
 
@@ -143,22 +150,14 @@ if (isset($_POST['submit'])) {
 								<section>
 									<form method="post" action="mailto: m.kodish@yahoo.com">
 										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
+											<label for="name">Name:</label>
+											<input type="text" id="name" name="name">
+											<label for="email">Email:</label>
+											<input type="email" id="email" name="email">
+											<label for="message">Message:</label>
+											<textarea id="message" name="message"></textarea>
+											<input type="submit" name="submit" value="Send">
 										</div>
-										<ul class="actions">
-											<li><a href="sendto: m.kodish@yahoo.com" class="button submit">Send Message</a></li>
-										</ul>
 									</form>
 								</section>
 								<section>
