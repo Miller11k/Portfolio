@@ -1,22 +1,4 @@
 <!DOCTYPE HTML>
-<?php
-if (isset($_POST['submit'])) {
-  // get the form data
-  $to = "m.kodish@yahoo.com";
-  $subject = "Message from your portfolio site";
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
-
-  // build the email content
-  $email_content = "Name: $name\n";
-  $email_content .= "Email: $email\n\n";
-  $email_content .= "Message:\n$message\n";
-
-  // send the email
-  mail($to, $subject, $email_content);
-}
-?>
 
 <!--
 	Hyperspace by HTML5 UP
@@ -54,8 +36,16 @@ if (isset($_POST['submit'])) {
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Miller Kodish's Portfolio</h1>
-							<p>Welcome to my portfolio, where you will find links to a collection of my past projects, prior employment, and ways to contact me.</p>
-							<p>"Creativity is seeing what others see and thinking what no one else ever thought." -Albert Einstein</p>
+							<h2>About Me</h2>
+							<p>Since I was a child I have been researching how electronics work and how they were able to connect those around the world. 
+								Since then I have dedicated my life to developing inventions that I feel would have an impact on those around me 
+								(see "Past Projects" for more detailed information). To me, engineering is the bridge that connects magic that we 
+								could only dream of to the everyday world. I graduated from Newton South High School with a certification from the 
+								engineering department and am currently an undergraduate student at Purdue University's Elmore Family School of 
+								Electrical and Computer Engineering where I hope to graduate with a major in computer engineering and a 
+								minor in economics.</p>
+							<q>"Creativity is seeing what others see and thinking what no one else ever thought."</q>
+							<cite>- Albert Einstein</cite>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Start The Tour</a></li>
 							</ul>
