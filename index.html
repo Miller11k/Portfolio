@@ -1,4 +1,16 @@
 <!DOCTYPE HTML>
+<?php
+if (isset($_POST['submit'])) {
+  // get the form data
+  $to = $_POST['to'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
+  // send the email
+  mail($to, $subject, $message);
+}
+?>
+
 <!--
 	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
@@ -20,8 +32,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">See My Resume</a></li>
-							<li><a href="#two">Past Projects</a></li>
+							<li><a href="#one">About Me</a></li>
+							<li><a href="#two">My Skills</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -49,7 +61,7 @@
 							<a class="image"><img src="images/Circuit-Neon.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
-									<h2>See My Resume</h2>
+									<h2>Access My Resume</h2>
 									<p>If you click the button below, it will redirect you to a link containing my most up-to-date resume available.</p>
 									<ul class="actions">
 										<li><a href="documents/Resume.pdf" class="button">Access Resume</a></li>
@@ -73,10 +85,10 @@
 							<a class="image"><img src="images/github-logo.png" alt="Github Logo" data-position="25% 25%"/></a>
 							<div class="content">
 								<div class="inner">
-									<h2>Github Link</h2>
+									<h2>Access my Github</h2>
 									<p>Click the button to gain direct access to my github to demonstrate my coding abilities.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="https://github.com/Miller11k" target = "_blank" class ="button">Access My Github</a></li>
 									</ul>
 								</div>
 							</div>
@@ -121,19 +133,15 @@
 								</section>
 							</div>
 							<ul class="actions">
-								<li><a href="generic.html" target="_blank" class="button">Test Button</a></li>
-							</ul>
-						</div>
-					</section>
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<p>If you want to get into contact with me, please feel free to leave a message, along with how to contact you.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="mailto: m.kodish@yahoo.com">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
@@ -149,7 +157,7 @@
 											</div>
 										</div>
 										<ul class="actions">
-											<li><a href="https://purdue0-my.sharepoint.com/:b:/g/personal/mkodish_purdue_edu/EaVgz8fs7npCu4zc9hkY78IBdpw46QAsDxCUv-DkLbWBag?e=R9Uf6Q" class="button submit">Send Message</a></li>
+											<li><a href="sendto: m.kodish@yahoo.com" class="button submit">Send Message</a></li>
 										</ul>
 									</form>
 								</section>
@@ -172,7 +180,7 @@
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="https://github.com/Miller11k" class="icon brands fa-github"><span class="label">Instagram</span></a></li>
+												<li><a href="https://github.com/Miller11k" class="icon brands fa-github"><span class="label">Github</span></a></li>
 												<li><a href="https://www.linkedin.com/in/miller-kodish/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
 										</li>
