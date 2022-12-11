@@ -6,4 +6,4 @@ A drynamic landing page for my portfolio for employers to see my work.
 | Page | Contents|
 | ------------ | ----------------|
 |Index| Landing Page|
-|Past-Projects| Page with links to highlighted past projects|
+|Past-Projects| Page With Links to Highlighted Past Projects|
